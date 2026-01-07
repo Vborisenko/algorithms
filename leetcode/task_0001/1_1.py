@@ -18,6 +18,16 @@ def two_sum(nums: List[int], target: int) -> List[int]:
         except:
             continue
 
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        sub_map = {}
+
+        for i in range(len(nums)):
+            if target - nums[i] in sub_map.keys():
+                return [sub_map[target - nums[i]], i]
+
+            sub_map[nums[i]] = i
+
 
 if __name__ == '__main__':
     print(two_sum([0, 3, 2, 0], 0))
