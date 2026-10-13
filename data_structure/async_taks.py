@@ -1,6 +1,11 @@
 import random
 import asyncio
 import arrow
+import _ctypes
+
+
+def di(obj_id):
+    return _ctypes.PyObj_FromPtr()
 
 
 async def waiter(name):
